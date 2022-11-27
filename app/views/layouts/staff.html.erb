@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= document_title %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+<!-- cssを読み込む 現在は app/assets/stylesheets/staff.css -->
+    <%= stylesheet_link_tag "staff", media: "all", "data-turbolinks-track": "reload" %>
+<!-- javascriptを読み込む 現在は app/javascript/packs/application.js -->
+    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <%= render "shared/header" %>
+      <div id="container">
+        <%= yield %>
+      </div>
+      <%= render "shared/footer" %>
+    </div>
+  </body>
+</html>
