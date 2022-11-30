@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.exception_app = ->(env) do
+  config.exceptions_app = ->(env) do
     request = ActionDispatch::Request.new(env)
 
     action =
